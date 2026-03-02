@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: hsl(0 0% 100%);
+  --color-foreground: hsl(222.2 84% 4.9%);
+  --color-card: hsl(0 0% 100%);
+  --color-card-foreground: hsl(222.2 84% 4.9%);
+  --color-popover: hsl(0 0% 100%);
+  --color-popover-foreground: hsl(222.2 84% 4.9%);
+  --color-primary: hsl(221.2 83.2% 53.3%);
+  --color-primary-foreground: hsl(210 40% 98%);
+  --color-secondary: hsl(210 40% 96.1%);
+  --color-secondary-foreground: hsl(222.2 47.4% 11.2%);
+  --color-muted: hsl(210 40% 96.1%);
+  --color-muted-foreground: hsl(215.4 16.3% 46.9%);
+  --color-accent: hsl(210 40% 96.1%);
+  --color-accent-foreground: hsl(222.2 47.4% 11.2%);
+  --color-destructive: hsl(0 84.2% 60.2%);
+  --color-destructive-foreground: hsl(210 40% 98%);
+  --color-border: hsl(214.3 31.8% 91.4%);
+  --color-input: hsl(214.3 31.8% 91.4%);
+  --color-ring: hsl(221.2 83.2% 53.3%);
+  --color-sidebar: hsl(0 0% 98%);
+  --color-sidebar-foreground: hsl(222.2 84% 4.9%);
+  --color-sidebar-accent: hsl(210 40% 96.1%);
+  --color-sidebar-border: hsl(214.3 31.8% 91.4%);
+  --radius-sm: 0.25rem;
+  --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+
+  /* Status colors for work orders & appointments */
+  --color-status-new: hsl(210 40% 96.1%);
+  --color-status-scheduled: hsl(217 91% 60%);
+  --color-status-dispatched: hsl(262 83% 58%);
+  --color-status-en-route: hsl(38 92% 50%);
+  --color-status-in-progress: hsl(142 71% 45%);
+  --color-status-on-hold: hsl(25 95% 53%);
+  --color-status-completed: hsl(142 76% 36%);
+  --color-status-cancelled: hsl(0 84% 60%);
+
+  /* Priority colors */
+  --color-priority-low: hsl(210 40% 96.1%);
+  --color-priority-normal: hsl(217 91% 60%);
+  --color-priority-high: hsl(25 95% 53%);
+  --color-priority-emergency: hsl(0 84% 60%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
